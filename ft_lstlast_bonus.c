@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*current;
 
-	if (lst == 0)
+	if (!lst)
 		return (0);
 	current = lst;
 	while (1)
