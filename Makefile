@@ -6,7 +6,7 @@
 #    By: fbenini- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 19:14:42 by fbenini-          #+#    #+#              #
-#    Updated: 2025/07/21 09:57:48 by fbenini-         ###   ########.fr        #
+#    Updated: 2025/07/19 14:30:20 by fbenini-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,8 @@ $(NAME): $(OBJS)
 
 all: ${NAME}
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rc ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus:
+	@$(MAKE) OBJS="$(OBJS) $(BONUS_OBJS)"
 
 clean:
 	${RM} ${OBJS} ${BONUS_OBJS}
@@ -50,4 +50,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: all clean fclean re bonus
+.PHONY: all bonus clean fclean re
