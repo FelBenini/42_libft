@@ -31,7 +31,7 @@ OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I $(HDRS) -c $< -o $@
+	$(CC) $(CFLAGS) -I.$(HDRS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
